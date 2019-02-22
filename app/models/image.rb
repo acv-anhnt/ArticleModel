@@ -1,5 +1,5 @@
 class Image < ActiveRecord::Base
-  belongs_to :acticle
+  belongs_to :article
 
   def increse_like
     self.like += 1

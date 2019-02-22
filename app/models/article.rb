@@ -2,8 +2,13 @@ class Article < ActiveRecord::Base
   has_many :texts
   has_many :images
 
+  def is_published
+    return false if self.post_at
+  end
+
   def get_content
-    self.texts
+    content = self.texts + self.images
+    content.sort_by{ |item| item.position}
   end
 
   def increse_like
