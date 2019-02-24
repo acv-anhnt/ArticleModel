@@ -27,7 +27,11 @@ text = Text.create(headline: 'Super hot news', position: 1, like: 1000, paragrap
 text2 = Text.create(headline: 'Super cool news', position:3, like: 10, paragraph: 'This is a mega cool news',
   article: article1)
 image = Image.create(headline: 'Anh minh hoa', position:2, like: 20, url: 'http://anhMinhHoa.com', article: article1)
-
+article1.post_at = '2019-02-24 16:13:50'
 ap article1.get_content
 
-ap Time.now.strftime("%m/%d/%Y")
+ap Time.now.utc
+ap Time.now.utc.to_i
+ap article1.post_at.to_i
+puts article1.is_published
+
