@@ -26,12 +26,10 @@ ap article1
 text = Text.create(headline: 'Super hot news', position: 1, like: 1000, paragraph: 'This is a mega hot news', article: article1)
 text2 = Text.create(headline: 'Super cool news', position:3, like: 10, paragraph: 'This is a mega cool news',
   article: article1)
-image = Image.create(headline: 'Anh minh hoa', position:2, like: 20, url: 'http://anhMinhHoa.com', article: article1)
+image = Image.create(headline: 'Anh minh hoa', position:1, like: 20, url: 'http://anhMinhHoa.com', article: article1)
+image2 = Image.create(headline: 'Anh minh hoa2', position:3, like: 20, url: 'http://anhMinhHoa.com', article: article1)
+image3 = Image.create(headline: 'Anh minh hoa3', position:2, like: 20, url: 'http://anhMinhHoa.com', article: article1)
 article1.post_at = '2019-02-24 16:13:50'
-ap article1.get_content
 
-ap Time.now.utc
-ap Time.now.utc.to_i
-ap article1.post_at.to_i
-puts article1.get_published
+ap article1.images
 

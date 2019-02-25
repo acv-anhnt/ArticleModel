@@ -1,11 +1,8 @@
 class Text < ActiveRecord::Base
+  default_scope {order(:position)}
   belongs_to :article
-  validates :headline, :position, :paragraph, presence: true
+  validates :headline, :position, :article, :url, presence: true
   def increse_like
-    self.like += 1
-  end
-
-  def get_like
-    self.like
+    self.increment!(:like)
   end
 end
