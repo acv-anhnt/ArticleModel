@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2019_02_22_062701) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
-    t.integer "like"
+    t.integer "like", default: 0
     t.datetime "post_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_02_22_062701) do
     t.string "headline"
     t.integer "position"
     t.string "url"
-    t.integer "like"
+    t.integer "like", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "article_id"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2019_02_22_062701) do
     t.string "headline"
     t.integer "position"
     t.text "paragraph"
-    t.integer "like"
+    t.integer "like", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "article_id"

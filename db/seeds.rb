@@ -33,5 +33,5 @@ ap article1.get_content
 ap Time.now.utc
 ap Time.now.utc.to_i
 ap article1.post_at.to_i
-puts article1.is_published
+puts article1.get_published
 

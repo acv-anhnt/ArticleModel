@@ -1,6 +1,6 @@
 class Image < ActiveRecord::Base
   belongs_to :article
-  validates :headline, presence: true
+  validates :headline, :position, :url, presence: true
   def increse_like
     self.like += 1
   end
