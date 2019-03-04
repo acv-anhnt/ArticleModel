@@ -2,8 +2,8 @@ class Article < ActiveRecord::Base
 
   has_many :texts
   has_many :images
-  validates :title, presence: true
-  def published!
+  validates :title, :post_at, presence: true
+  def published?
     post_at < Time.current
   end
 
